@@ -99,7 +99,7 @@ def clinvar_raw() -> list[tuple]:
             rs = row['RS# (dbSNP)'],
             phenotype_ids = phenotype_ids,
             phenotypes = phenotypes,
-            otherids = otherids,
+            otherids = None if otherids[0] == '-' else otherids,
             origin = row['OriginSimple'],
             variation_id = row['VariationID'],
             assembly = row['Assembly'],
